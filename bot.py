@@ -77,13 +77,26 @@ async def complain(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text("Complaint received. Admin will reach out 🙏")
 
 async def admin(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    if update.effective_user.id!= ADMIN_ID:
-        await update.message.reply_text("Not authorized.")
+    if update.effective_user.id != ADMIN_ID:
+        await update.message.reply_text("Not authorized")
         return
-    await update.message.reply_text(f"📊 ADMIN DASHBOARD 📊\n\nPaid Users: {len(PAID_USERS)}\nComplaints: {len(COMPLAINTS)}")
+    
+    paid_count = len(PAID_USERS)
+    complaint_count = len(COMPLAINTS)
+    
+    await update.message.reply_text(
+        f"📊 ADMIN DASHBOARD 📊\n\n"
+        f"Paid Users: {paid_count}\n"
+        f"Complaints: {complaint_count}\n\n"
+        f"Tag: @{ADMIN_USERNAME}"
+    )
 
 def main():
-    app = ApplicationBuilder().token(TELEGRAM_TOKEN).build()
+    TOKEN = os.getenv("TELEGRAM_TOKEN")
+    print(f"TOKEN LOADED: {TOKEN}")
+
+    app = ApplicationBuilder().token(TOKEN).build()
+    
     app.add_handler(CommandHandler("start", start))
     app.add_handler(CommandHandler("price", price))
     app.add_handler(CommandHandler("sample", sample))
@@ -91,6 +104,8 @@ def main():
     app.add_handler(CommandHandler("verify", verify))
     app.add_handler(CommandHandler("complain", complain))
     app.add_handler(CommandHandler("admin", admin))
+    
+    print("Bot is running...")
     app.run_polling()
 
 if __name__ == "__main__":
