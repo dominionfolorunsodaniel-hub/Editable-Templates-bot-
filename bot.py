@@ -6,7 +6,7 @@ from telegram.ext import ApplicationBuilder, CommandHandler, ContextTypes
 
 TELEGRAM_TOKEN = os.getenv("8662696847:AAE7M964TpSsq0U6dUcNtDSica6u75PGecI")
 PAYSTACK_SECRET_KEY = os.getenv("sk_test_c36d724d380c57883ffd7391ae1aeb1ba6c4140e")
-PAYSTACK_PUBLIC_KEY = "pk_test_7e70a878505d7b2eaef506298887b3d9c7e2c34e" 
+PAYSTACK_PUBLIC_KEY = "pk_test_7e70a878505d7b2eaef506298887b3d9c7e2c34e")
 os.getenv("sk_test_c36d724d380c57883ffd7391ae1aeb1ba6c4140e")
 ADMIN_ID = int(os.getenv("8638513243")
 ADMIN_USERNAME = "t.me/coldfx34"
