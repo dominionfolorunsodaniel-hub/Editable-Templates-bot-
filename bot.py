@@ -28,7 +28,7 @@ def create_paystack_payment(email, amount_kobo, user_id):
         return None
 
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    msg = (f"Welcome to EditableTemplateNG 🎨\n\nGet 3 EDITABLE Canva Templates for ₦2,000\nFollow us on IG: @{editabletemplateng}\nhttps://www.instagram.com//{editabletemplateng?igsh=MXdjMTI5NHUwZGh4bg==}\n\nCommands:\n/PRICE /SAMPLE /BUY /COMPLAIN /HELP")
+    msg = (f"Welcome to EditableTemplateNG 😍\n\nGet 3 EDITABLE TEMPLATES\n💰 Price: ₦2,000\nFollow us on IG: @editabletemplateng\nhttps://instagram.com/editabletemplateng?igsh=MXdjMTI5NHUwZGh4bg==\n\nCommands:\n/PRICE /SAMPLE /BUY")
     await update.message.reply_text(msg)
 
 async def price(update: Update, context: ContextTypes.DEFAULT_TYPE):
