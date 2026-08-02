@@ -36,7 +36,7 @@ async def price(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
 async def sample(update: Update, context: ContextTypes.DEFAULT_TYPE):
     # NEW: Instead of sending photos, tell them to text admin
-    keyboard = [[InlineKeyboardButton(f"📩 Text @{ADMIN_USERNAME} for Samples", url=f"https://t.me/{ADMIN_USERNAME}")]]
+    keyboard = [[InlineKeyboardButton("📩 Text @{ADMIN_USERNAME} for Samples", url=f"https://t.me/{ADMIN_USERNAME}")]]
     await update.message.reply_text(
         "🔥 Want to see samples?\n\nClick the button below to chat with Admin directly on Telegram.\nI'll send you sample pictures + answer any questions 😊",
         reply_markup=InlineKeyboardMarkup(keyboard)
