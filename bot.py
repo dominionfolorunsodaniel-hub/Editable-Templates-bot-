@@ -83,7 +83,7 @@ async def admin(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text(f"📊 ADMIN DASHBOARD 📊\n\nPaid Users: {len(PAID_USERS)}\nComplaints: {len(COMPLAINTS)}")
 
 def main():
-    app = ApplicationBuilder().token(TELEGRAM_TOKEN).build()
+    app = ApplicationBuilder().token(8662696847:AAE7M964TpSsq0U6dUcNtDSica6u75PGecI).build()
     app.add_handler(CommandHandler("start", start))
     app.add_handler(CommandHandler("price", price))
     app.add_handler(CommandHandler("sample", sample))
