@@ -93,7 +93,7 @@ async def admin(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
 def main():
     TOKEN = os.getenv("TELEGRAM_TOKEN")
-    print(f"TOKEN LOADED: {TOKEN}")
+    print("TOKEN loaded successfully.")
 
     app = ApplicationBuilder().token(TOKEN).build()
     
