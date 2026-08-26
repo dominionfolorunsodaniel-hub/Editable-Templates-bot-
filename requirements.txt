@@ -1,0 +1,5 @@
+python-telegram-bot[job-queue]
+openai
+huggingface_hub
+requests
+Pillow
