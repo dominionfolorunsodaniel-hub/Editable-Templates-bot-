@@ -579,7 +579,7 @@ async def start(update, context):
     keyboard = [
         [InlineKeyboardButton("🎨 Create AI Template", callback_data="image_help")],
         [InlineKeyboardButton("🖌️ Style Presets", callback_data="open_styles")],
-        [InlineKeyboardButton("💎 Premium ₦1,000", callback_data="premium")],
+        [InlineKeyboardButton("💎 Premium ₦1,500", callback_data="premium")],
         [InlineKeyboardButton("👥 My Referrals", callback_data="referrals")],
         [InlineKeyboardButton("🏆 My Points", callback_data="points")],
     ]
